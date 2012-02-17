@@ -23,7 +23,7 @@ app.run()
 """
 from flask import Flask
 
-__version__ = "0.1a"
+__version__ = "0.1.1a"
 __author__ = 'Anderson Pierre Cardoso'
 __license__ = 'MIT'
 

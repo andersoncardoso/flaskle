@@ -3,17 +3,17 @@
 import sys
 import os
 from distutils.core import setup
-import flaskle
 
 setup(name='flaskle',
-      version=flaskle.__version__,
+      version='0.1.2a',
       description='bottle-like utility decorators for flask',
-      long_description=flaskle.__doc__,
-      author=flaskle.__author__,
+      #long_description='tl;dr;',
+      author='Anderson Pierre Cardoso',
       author_email='apierre.cardoso@gmail.com',
       # url='',
       py_modules=['flaskle'],
       scripts=['flaskle.py'],
+      install_requires=['flask'],
       license='MIT',
       platforms = 'any',
       classifiers=['Development Status :: 4 - Beta',
