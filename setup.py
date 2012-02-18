@@ -1,11 +1,8 @@
 #!/usr/bin/env python
-
-import sys
-import os
 from distutils.core import setup
 
 setup(name='flaskle',
-      version='0.2',
+      version='0.3',
       description='bottle-like utility decorators for flask',
       #long_description='tl;dr;',
       author='Anderson Pierre Cardoso',
@@ -15,7 +12,7 @@ setup(name='flaskle',
       scripts=['flaskle.py'],
       install_requires=['Flask'],
       license='MIT',
-      platforms = 'any',
+      platforms='any',
       classifiers=['Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',

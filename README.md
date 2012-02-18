@@ -13,17 +13,35 @@ pip install flaskle
 from flask import Flask
 import flaskle
 
+flaskle.patch()
 app = Flask(__name__)
 
 @app.get('/feature/')
 def feature_get():
-    # ... sometinh here
-    return something
+    # ... your 'get' view here
+    return my_get_return
 
 @app.post('/feature/')
 def feature_post():
-    # ...some more things here
-    return my_json_stuff
+    # ...your 'post' view here
+    return my_post_return
 
-app.run()
+@app.put('/feature/')
+def feature_put():
+    # ...your 'put' view here
+    return my_put_return
+
+@app.delete('/feature/')
+def feature_delete():
+    # ...your 'delete' view here
+    return my_delete_return
+
+@app.get('/other/one/')
+@app.get('/other/one/')
+def get_and_post_view():
+    # view code here
+    return {'some': 'thing'}
+
+if __name__ == '__main__':
+    app.run()
 </pre>

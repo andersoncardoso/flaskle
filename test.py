@@ -3,19 +3,24 @@ import unittest
 from flask import Flask
 import flaskle
 
+flaskle.patch()
 app = Flask(__name__)
+
 
 @app.get('/test/')
 def _get_view():
     return 'GET TEST'
 
+
 @app.post('/test/')
 def _post_view():
     return 'POST TEST'
 
+
 @app.put('/test/')
 def _put_view():
     return 'PUT TEST'
+
 
 @app.delete('/test/')
 def _delete_view():
@@ -43,7 +48,6 @@ class FlaskleTestCase(unittest.TestCase):
     def test_delete(self):
         r = self.app.delete('/test/')
         assert 'DELETE TEST' in r.data
-
 
 
 if __name__ == '__main__':

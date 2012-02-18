@@ -23,9 +23,10 @@ app.run()
 """
 from flask import Flask
 
-__version__ = "0.1.1a"
+__version__ = "0.3"
 __author__ = 'Anderson Pierre Cardoso'
 __license__ = 'MIT'
+
 
 def get(self, route, **options):
     """route using Http GET"""
@@ -44,6 +45,7 @@ def post(self, route, **options):
         return func
     return wrapper
 
+
 def put(self, route, **options):
     """route using Http PUT """
     def wrapper(func):
@@ -51,6 +53,7 @@ def put(self, route, **options):
         self.add_url_rule(route, options.pop('endpoint', None), func, **options)
         return func
     return wrapper
+
 
 def delete(self, route, **options):
     """route using Http DELETE """
@@ -60,8 +63,10 @@ def delete(self, route, **options):
         return f
     return decorator
 
+
 # monkey patch everything
-Flask.get = get
-Flask.post = post
-Flask.put = put
-Flask.delete = delete
+def patch():
+    Flask.get = get
+    Flask.post = post
+    Flask.put = put
+    Flask.delete = delete
