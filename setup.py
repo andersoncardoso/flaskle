@@ -5,7 +5,7 @@ import os
 from distutils.core import setup
 
 setup(name='flaskle',
-      version='0.1.2a',
+      version='0.2',
       description='bottle-like utility decorators for flask',
       #long_description='tl;dr;',
       author='Anderson Pierre Cardoso',
@@ -13,7 +13,7 @@ setup(name='flaskle',
       # url='',
       py_modules=['flaskle'],
       scripts=['flaskle.py'],
-      install_requires=['flask'],
+      install_requires=['Flask'],
       license='MIT',
       platforms = 'any',
       classifiers=['Development Status :: 4 - Beta',
