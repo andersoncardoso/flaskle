@@ -2,7 +2,7 @@
 from distutils.core import setup
 
 setup(name='flaskle',
-      version='0.3',
+      version='0.4',
       description='bottle-like utility decorators for flask',
       #long_description='tl;dr;',
       author='Anderson Pierre Cardoso',

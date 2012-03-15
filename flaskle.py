@@ -21,9 +21,9 @@ def feature_post():
 
 app.run()
 """
-from flask import Flask
+from flask import Flask, Blueprint
 
-__version__ = "0.3"
+__version__ = "0.4"
 __author__ = 'Anderson Pierre Cardoso'
 __license__ = 'MIT'
 
@@ -70,3 +70,8 @@ def patch():
     Flask.post = post
     Flask.put = put
     Flask.delete = delete
+
+    Blueprint.get = get
+    Blueprint.post = post
+    Blueprint.put = put
+    Blueprint.delete = delete
