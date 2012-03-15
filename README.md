@@ -37,7 +37,7 @@ def feature_delete():
     return my_delete_return
 
 @app.get('/other/one/')
-@app.get('/other/one/')
+@app.post('/other/one/')
 def get_and_post_view():
     # view code here
     return {'some': 'thing'}
